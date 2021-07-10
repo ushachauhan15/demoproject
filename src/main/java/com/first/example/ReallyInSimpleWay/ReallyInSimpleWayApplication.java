@@ -1,0 +1,22 @@
+package com.first.example.ReallyInSimpleWay;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+public class ReallyInSimpleWayApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ReallyInSimpleWayApplication.class, args);
+	}
+
+	@RestController
+	class HelloController{
+		@GetMapping("/")
+		String Hello() {
+			return "First word";
+		}
+	}
+}
